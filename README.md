@@ -35,9 +35,9 @@ Things you may want to cover:
 |password|string|null:false|
 
 ### Association
-- has_many :group
-- has_many :messege
-- has_many :image
+- has_many :groups through groups_users
+- has_many :messeges
+- has_one :groups_user
 
 
 ## messegesテーブル
@@ -45,7 +45,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|body|text|null; false|
+|body|text|
 |image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
@@ -53,28 +53,27 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
-- has_many :image
 
-## imagesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false|
-|messege_id|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :messege
-- belongs_to :user
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|messege_id|integer|null: false, foreign_key: true|
+|name|string|null; false|
 
 ### Association
-- has_many :messege
+- has_many :messeges
+- has_many :users through groups_users
+- has_one :groups_user
+
+## groups_usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
 - belongs_to :user
