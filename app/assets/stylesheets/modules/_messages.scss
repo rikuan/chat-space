@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+  }
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+}    
+
+.side_bar{
+    height: 100vh;
+    width: 300px;
+    background-color: #253141;
+}
+
+.side_menu{
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side_topics{
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    &__icons{
+        display: flex;
+    }
+}
+
+.user_name{
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+    width: 60px;
+    
+}
+
+.icon1{
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+.icon2{
+    color: #ffffff;
+}
+
+.main{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+}
+
+.group_list{
+    padding: 20px 0 40px;
+
+    &__name{
+        font-size: 15px;
+    }
+
+    &__messege{
+        font-size: 11px;
+        margin-top: 5px;
+    }
+}
+
+
+.main_chat{
+    height: 100vh;
+    width: calc(100vw - 300px);
+    background-color: #ffffff;
+}        
+.top_bar{
+        height: 100px;
+        background-color: #ffffff;
+}
+    
+.chat_bar{
+        height: calc(100vh - 190px);
+        background-color: #fafafa;
+}
+    
+.bottom_bar{
+        height: 90px;
+        background-color: #d2d2d2;
+}
+
