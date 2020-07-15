@@ -42,12 +42,12 @@
     
 }
 
-.icon1{
+.icon_1st{
     margin-right: 5px;
     color: #ffffff;
 }
 
-.icon2{
+.icon_2nd{
     color: #ffffff;
 }
 
@@ -58,7 +58,7 @@
 
 .group_list{
     padding: 20px 0 40px;
-
+    
     &__name{
         font-size: 15px;
     }
@@ -69,7 +69,6 @@
     }
 }
 
-
 .main_chat{
     height: 100vh;
     width: calc(100vw - 300px);
@@ -78,15 +77,114 @@
 .top_bar{
         height: 100px;
         background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
 }
-    
+
+.group_bar{
+    font-size: 20px;
+}
+
+.groupName{
+    color: #333333;
+    font-size: 20px;
+    margin: 35px 0 15px 40px;
+}
+
+.memberList{
+    display: flex;
+}
+
+.putMember{
+    color: #999999;
+    font-size: 12px;
+}
+
+.userName{
+    color: #999999;
+    font-size: 12px;
+}
+
+.edit_button{
+    width: 72px;
+    padding: 0 20px 0 20px;
+    margin: 28px 40px;
+    border: 1px #38aef0 solid;
+    display: flex;
+    align-items: center;
+}
+
+.editor{
+    text-decoration: none;
+    font-size: 16px;
+    color: #38aef0;
+}
+
 .chat_bar{
         height: calc(100vh - 190px);
         background-color: #fafafa;
+}
+
+.messegeZone{
+    padding: 35px 0 46px 40px;
+}
+
+.chatUser{
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.nameLine{
+    color: #333333;
+    font-size: 16px;
+}
+
+.timeLine{
+    color: #999999;
+    font-size: 12px;
+    margin-left: 10px;
 }
     
 .bottom_bar{
         height: 90px;
         background-color: #d2d2d2;
+        display: flex;
+        align-items: center;
 }
 
+.post_zone{
+    margin: 10px 15px 10px 40px;
+    display: flex;
+    background-color: #fafafa;
+    height: 50px;
+    width: 100%;
+
+}
+
+.type_zone{border: none;
+    height: 50px;
+    width: 100%;
+    padding: 0 45px 0 15px;}
+
+.image_attachment{
+    padding: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.tet{
+    display: none;
+}
+
+
+.submit_btn{
+    background-color: #38AEF0;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 30px;
+    margin-right: 40px;
+
+}

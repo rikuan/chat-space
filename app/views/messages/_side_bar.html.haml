@@ -4,13 +4,16 @@
       .user_name ここにユーザー名
       .icons
         .icon1
-          =link_to "#" do
+          =link_to "#", class: 'icon_1st'  do
             = icon('fas','edit')
         .icon2
-          =link_to "#" do
+          =link_to "#", class: 'icon_2nd' do
             = icon('fas','cog')
             
   .main
-    .group_list
-      .gloup_list__name あ
-      .gloup_list__messege い
+    .right
+      .group_list
+        .group_list__name
+          teckcamp
+        .group_list__messege
+          メッセージはまだありません

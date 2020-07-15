@@ -1,4 +1,29 @@
 .main_chat
   .top_bar
+    .group_bar
+      .groupName
+        test
+        .memberList
+          .putMember member:
+          .userName masa
+    .edit_button 
+      =link_to "#", class: "editor" do
+        Edit
   .chat_bar
+    .messegeZone
+      .chatUser
+        .nameLine masa 
+        .timeLine 2019/11/20(Wed) 17:43:01
+      .messegeLine おはよう！
+    .messegeZone
+      .chatUser
+        .nameLine masa 
+        .timeLine 2019/11/20(Wed) 17:43:01
+      .messegeLine 今夜は雨
   .bottom_bar
+    .post_zone
+      %input{class: "type_zone" ,placeholder: "type a message" ,type: "text" }
+      %label{class: "image_attachment"} 
+        = icon('fas', 'image')
+        %input{type: "file", class: "tet" } 
+    %input{type: "submit", value: "Send", class: "submit_btn" }
