@@ -1,13 +1,15 @@
 .side_bar
   .side_menu
     .side_topics
-      .user_name ここにユーザー名
+      .user_name
+        = current_user.name
       .icons
         .icon1
           =link_to "#", class: 'icon_1st'  do
             = icon('fas','edit')
         .icon2
-          =link_to "#", class: 'icon_2nd' do
+          =link_to edit_user_path(current_user), class: 'icon_2nd' do
+          
             = icon('fas','cog')
             
   .main
