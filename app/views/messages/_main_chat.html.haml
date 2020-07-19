@@ -2,28 +2,25 @@
   .top_bar
     .group_bar
       .groupName
-        test
+        = @group.name
         .memberList
           .putMember member:
-          .userName masa
+          %ul.userName
+            - @group.users.each do |user|
+              %li.names
+              = user.name
+
     .edit_button 
-      =link_to "#", class: "editor" do
+      =link_to edit_group_path(@group), class: "editor" do
         Edit
   .chat_bar
-    .messegeZone
-      .chatUser
-        .nameLine masa 
-        .timeLine 2019/11/20(Wed) 17:43:01
-      .messegeLine おはよう！
-    .messegeZone
-      .chatUser
-        .nameLine masa 
-        .timeLine 2019/11/20(Wed) 17:43:01
-      .messegeLine 今夜は雨
+    .messageZone
+      = render @messages
   .bottom_bar
-    .post_zone
-      %input{class: "type_zone" ,placeholder: "type a message" ,type: "text" }
-      %label{class: "image_attachment"} 
-        = icon('fas', 'image')
-        %input{type: "file", class: "tet" } 
-    %input{type: "submit", value: "Send", class: "submit_btn" }
+    = form_with model: [@group, @message], html: {class: "post_zone"}, local: true do |f|
+      .type_Zone
+        = f.text_field :content, class: 'textField', placeholder: 'type a message'
+        = f.label :image, class: 'image_attachment' do
+          = icon('far', 'image', class: 'Form_icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'submit_btn'
