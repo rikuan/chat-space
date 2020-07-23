@@ -132,6 +132,8 @@
 .chat_bar{
         height: calc(100vh - 190px);
         background-color: #fafafa;
+        overflow: scroll;
+
 }
 
 .MessageBox{
