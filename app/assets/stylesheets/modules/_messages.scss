@@ -133,18 +133,15 @@
         height: calc(100vh - 190px);
         background-color: #fafafa;
         overflow: scroll;
+        padding: 35px 40px 0;
 
 }
 
 .MessageBox{
+    margin-top: 12px;
     margin-bottom: 46px;
 }
 
-.messageZone{
-    margin-top: 12px;
-    padding: 35px 40px 0;
-    height: calc(100vh - 100px - 90px); 
-}
 
 .content{
     color: #434a54;

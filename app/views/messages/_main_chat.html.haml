@@ -14,8 +14,7 @@
       =link_to edit_group_path(@group), class: "editor" do
         Edit
   .chat_bar
-    .messageZone
-      = render @messages
+    = render @messages
   .bottom_bar
     = form_with model: [@group, @message], html: {class: "post_zone"}, local: true do |f|
       .type_Zone
